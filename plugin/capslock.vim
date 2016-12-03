@@ -48,7 +48,7 @@ endfunction
 
 function! s:disable(mode)
     if s:enabled(a:mode)
-        for item in keys(get(g:, 'capslock_custom_mapping', {}))
+        for item in keys(get(g:, 'capslock_key_mapping', {}))
             silent! exe a:mode.'unmap' s:buffer item[0]
             silent! exe a:mode.'unmap' s:buffer item[1]
         endfor
